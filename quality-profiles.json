@@ -1,0 +1,112 @@
+{
+  "comfy-generate-3d": {
+    "purpose": "通过 Comfy 工作流生成可下载的 3D 资产",
+    "artifact": "3d-generation-result",
+    "success": "任务终态成功且模型文件、预览与生成参数可追溯",
+    "not_for": "复杂拓扑精修、骨骼绑定或 DCC 内手工建模",
+    "near_miss": "Blender 中的资产修复与动画制作",
+    "basic_prompt": "根据单张产品图生成低面数 3D 预览",
+    "failure_prompt": "3D 任务进入 Failed 或输出文件缺失",
+    "advanced_context": "需要保持产品比例并交付多格式资产"
+  },
+  "comfy-generate-audio": {
+    "purpose": "通过 Comfy 工作流生成音效、音乐或语音素材",
+    "artifact": "audio-generation-result",
+    "success": "音频可播放且时长、格式、采样率和提示参数符合要求",
+    "not_for": "未经授权克隆真实人物声音或生成侵权音乐",
+    "near_miss": "专业 DAW 混音、母带和逐轨编辑",
+    "basic_prompt": "生成 10 秒无对白的科技界面环境音",
+    "failure_prompt": "音频任务超时或返回空文件",
+    "advanced_context": "视频项目需要多段风格一致的音频素材"
+  },
+  "comfy-generate-image": {
+    "purpose": "通过 Comfy 工作流生成可复现的图像资产",
+    "artifact": "image-generation-result",
+    "success": "图像、工作流参数、尺寸和种子均可追溯",
+    "not_for": "伪造身份材料、未经授权的人脸替换或受限内容",
+    "near_miss": "只做现有图像的像素级手工修图",
+    "basic_prompt": "生成一张 16:9 的电商主视觉草图",
+    "failure_prompt": "图像任务失败或模型节点不可用",
+    "advanced_context": "同一品牌需要一组构图一致的多尺寸图像"
+  },
+  "comfy-generate-video": {
+    "purpose": "通过 Comfy 工作流生成短视频与可恢复任务记录",
+    "artifact": "video-generation-result",
+    "success": "视频可播放且时长、帧率、分辨率和任务标识完整",
+    "not_for": "长片剪辑、精确逐帧合成或未授权人物视频生成",
+    "near_miss": "剪映时间线编辑或 Blender 三维动画",
+    "basic_prompt": "生成 5 秒的产品旋转展示视频",
+    "failure_prompt": "视频任务超时但已有任务标识",
+    "advanced_context": "首尾帧约束下生成多镜头连续素材"
+  },
+  "comfy-help": {
+    "purpose": "诊断 Comfy 技能、模型、节点和连接问题并给出路由建议",
+    "artifact": "comfy-help-report",
+    "success": "问题类别、证据、建议技能与下一步验证明确",
+    "not_for": "在未知环境直接安装节点、模型或修改工作流",
+    "near_miss": "通用 Python 包或 GPU 驱动故障排查",
+    "basic_prompt": "解释当前应使用哪个 Comfy 技能完成图片放大",
+    "failure_prompt": "帮助请求缺少错误信息和工作流上下文",
+    "advanced_context": "模型、节点与云端权限问题同时出现"
+  },
+  "comfy-remove-background": {
+    "purpose": "通过 Comfy 工作流抠图并生成透明背景资产",
+    "artifact": "background-removal-result",
+    "success": "透明通道、边缘质量、尺寸与输出格式验证通过",
+    "not_for": "需要复杂人工蒙版、逐帧视频抠像或版权规避",
+    "near_miss": "Photoshop 中的精细发丝手工修复",
+    "basic_prompt": "移除商品图背景并输出透明 PNG",
+    "failure_prompt": "抠图结果边缘破损或没有透明通道",
+    "advanced_context": "批量商品图需要统一留白和边缘质量"
+  },
+  "comfy-search-models": {
+    "purpose": "搜索并筛选适合 Comfy 工作流的模型",
+    "artifact": "model-search-report",
+    "success": "模型来源、许可证、兼容性、体积和选择理由完整",
+    "not_for": "自动下载来源不明模型或绕过许可证限制",
+    "near_miss": "搜索 Comfy 节点或工作流模板",
+    "basic_prompt": "查找适合写实产品图的可商用模型",
+    "failure_prompt": "搜索结果缺少许可证或兼容版本信息",
+    "advanced_context": "显存受限环境需要在质量和资源间权衡"
+  },
+  "comfy-search-nodes": {
+    "purpose": "搜索并评估 Comfy 自定义节点及其依赖风险",
+    "artifact": "node-search-report",
+    "success": "节点来源、版本、依赖、维护状态和替代方案可验证",
+    "not_for": "未审查源码就自动安装第三方节点",
+    "near_miss": "搜索模型权重或完整工作流模板",
+    "basic_prompt": "查找支持背景移除的维护中节点",
+    "failure_prompt": "节点仓库已归档或依赖冲突",
+    "advanced_context": "离线生产环境需要最小依赖节点组合"
+  },
+  "comfy-search-templates": {
+    "purpose": "搜索并筛选可复用的 Comfy 工作流模板",
+    "artifact": "template-search-report",
+    "success": "模板来源、依赖、输入输出和适配成本完整",
+    "not_for": "直接执行包含未知节点或外部脚本的模板",
+    "near_miss": "仅搜索模型权重或单个节点",
+    "basic_prompt": "查找产品图放大与去背景组合模板",
+    "failure_prompt": "模板依赖缺失或输入节点不兼容",
+    "advanced_context": "需要把多个模板合并为可审计生产工作流"
+  },
+  "comfy-upscale-image": {
+    "purpose": "通过 Comfy 工作流放大图像并控制细节增强",
+    "artifact": "upscale-result",
+    "success": "尺寸、锐度、伪影、色彩和输出格式验证通过",
+    "not_for": "把无法恢复的细节伪装成真实证据或身份信息",
+    "near_miss": "纯裁剪、压缩或人工像素修复",
+    "basic_prompt": "将 1024 像素商品图放大到 4K 并控制伪影",
+    "failure_prompt": "放大后出现明显光晕或面部变形",
+    "advanced_context": "批量素材需要统一色彩和多倍率输出"
+  },
+  "technique-combine-people": {
+    "purpose": "在获得授权的前提下合成多人同框图像并保持身份一致性",
+    "artifact": "people-composite-result",
+    "success": "授权、构图、身份一致性、边缘与光影验证完整",
+    "not_for": "欺骗性身份合成、冒充或未经同意使用真实人物",
+    "near_miss": "证件照生成、人脸替换或取证图像处理",
+    "basic_prompt": "把两位已授权人物合成自然的团队合照",
+    "failure_prompt": "人物身份漂移或遮挡关系错误",
+    "advanced_context": "多人团队海报需要统一光线与品牌构图"
+  }
+}

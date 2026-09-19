@@ -1,0 +1,25 @@
+{
+  "name": "comfy-skills",
+  "version": "0.1.0",
+  "description": "ComfyUI and Comfy Cloud generation, search, upscaling, background removal, and workflow skills",
+  "author": {
+    "name": "PartMe.AI",
+    "email": "partmeai@gmail.com"
+  },
+  "homepage": "https://github.com/full-aigc-skills/comfy-skills",
+  "repository": "https://github.com/full-aigc-skills/comfy-skills",
+  "source": "./",
+  "skills": [
+    "./skills/comfy-generate-3d",
+    "./skills/comfy-generate-audio",
+    "./skills/comfy-generate-image",
+    "./skills/comfy-generate-video",
+    "./skills/comfy-help",
+    "./skills/comfy-remove-background",
+    "./skills/comfy-search-models",
+    "./skills/comfy-search-nodes",
+    "./skills/comfy-search-templates",
+    "./skills/comfy-upscale-image",
+    "./skills/technique-combine-people"
+  ]
+}
